@@ -7,7 +7,7 @@ from draw_text import draw_text
 
 def predict(test_img, face_recognizer):
     # Преобразование тегов 1, 2 в текст
-    subjects = ['', 'Happy', 'Sad']
+    subjects = ['', 'Happy', 'Sad', 'Angry', 'Disgust', 'Fear', 'Neutral', 'Surprise']
 
     # Получить копию изображения
     img = test_img.copy()
