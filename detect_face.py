@@ -10,7 +10,7 @@ def detect_face(img):
 
     # scaleFactor представляет собой отношение уменьшения размера каждого изображения, minNeighbors представляет минимальное количество смежных прямоугольников, которые составляют цель обнаружения.
     # Здесь выберите размер изображения, которое нужно уменьшить в 1,2 раза. Чем больше minNeighbors, тем точнее распознается лицо, но его также легко пропустить
-    faces = face_cascade.detectMultiScale(img, scaleFactor=1.2, minNeighbors=1)  # TODO подобрать коэффициенты
+    faces = face_cascade.detectMultiScale(img, scaleFactor=1.1, minNeighbors=1)  # TODO подобрать коэффициенты
 
     # Если на картинке нет лица, картинка не будет участвовать в обучении, верните None
     if len(faces) == 0:
