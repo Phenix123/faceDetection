@@ -27,4 +27,3 @@ def predict(test_img, face_recognizer):
     draw_text(img, label_text, rect[0], rect[1] - 5)
 
     return img
-

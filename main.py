@@ -20,8 +20,8 @@ if __name__ == '__main__':
     print("Predicting images...")
 
     # Загрузите предсказанное изображение, здесь я просто, просто напишите путь напрямую
-    test_img1 = cv2.imread(r"./img_predict/happy1.jpg",0)
-    test_img2 = cv2.imread(r"./img_predict/sad1.jpg",0)
+    test_img1 = cv2.imread(r"./img_predict/happy1.jpg", 0)
+    test_img2 = cv2.imread(r"./img_predict/sad1.jpg", 0)
 
     # Делать предсказания
     # Обратите внимание, эта функция еще не написана! ! !
@@ -34,4 +34,3 @@ if __name__ == '__main__':
     cv2.imshow('Sad', predicted_img2)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-

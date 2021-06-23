@@ -12,17 +12,17 @@ def prepare_training_data():
     labels = []
     for image_path in dirs:
         # Если название картинки начинается со слова happy, метка 1l; sad начинается с метки 2
-        if image_path[0] == 'h':   ## happy
+        if image_path[0] == 'h':  ## happy
             label = 1
-        elif image_path[0] == 's': ## sad
+        elif image_path[0] == 's':  ## sad
             label = 2
-        elif image_path[0] == 'a': ##angry
+        elif image_path[0] == 'a':  ##angry
             label = 3
-        elif image_path[0] == 'd': ## disgust
+        elif image_path[0] == 'd':  ## disgust
             label = 4
-        elif image_path[0] == 'f': ## fear
+        elif image_path[0] == 'f':  ## fear
             label = 5
-        elif image_path[0] == 'n': ## neutral
+        elif image_path[0] == 'n':  ## neutral
             label = 6
         else:
             label = 7
@@ -31,11 +31,11 @@ def prepare_training_data():
         image_path = './bigimg_train/' + image_path
 
         # Вернуться к оттенкам серого, вернуться к объекту Mat
-        image = cv2.imread(image_path,0)
+        image = cv2.imread(image_path, 0)
 
         # Отображать изображение в форме окна, отображать 100 миллисекунд
-        #cv2.imshow("Training on image...", image)
-        #cv2.waitKey(100)
+        # cv2.imshow("Training on image...", image)
+        # cv2.waitKey(100)
 
         # Вызов функции, которую мы написали ранее
         face, rect = detect_face(image)
@@ -48,4 +48,3 @@ def prepare_training_data():
     cv2.destroyAllWindows()
 
     return faces, labels
-
